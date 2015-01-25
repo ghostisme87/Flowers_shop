@@ -1,14 +1,12 @@
-﻿Build started 25.01.2015 13:01:33.
+﻿Build started 25.01.2015 14:55:44.
      1>Project "C:\Users\noname\Documents\GitHub\Flowers_shop\Flowers_Shop\Flowers_Shop\Flowers_Shop.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\Flowers_Shop.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
-         stdafx.cpp
-         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Flowers_Shop.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Flowers_Shop.cpp
-         Flowers_Shop.cpp
-       ResourceCompile:
-         C:\Program Files\Windows Kits\8.0\bin\x86\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"Debug\Flowers_Shop.res" Flowers_Shop.rc 
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Flowers_Shop.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt dll_loader.cpp
+         dll_loader.cpp
+     1>c:\users\noname\documents\github\flowers_shop\flowers_shop\flowers_shop\dll_loader.cpp(21): warning C4101: 'wfd2' : unreferenced local variable
        Link:
          C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\noname\Documents\GitHub\Flowers_shop\Flowers_Shop\Debug\Flowers_Shop.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\noname\Documents\GitHub\Flowers_shop\Flowers_Shop\Debug\Flowers_Shop.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\noname\Documents\GitHub\Flowers_shop\Flowers_Shop\Debug\Flowers_Shop.lib" /MACHINE:X86 Debug\Flowers_Shop.res
+         Debug\dll_loader.obj
          Debug\Flowers_Shop.obj
          Debug\stdafx.obj
          Flowers_Shop.vcxproj -> C:\Users\noname\Documents\GitHub\Flowers_shop\Flowers_Shop\Debug\Flowers_Shop.exe
@@ -16,4 +14,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.55
+Time Elapsed 00:00:00.43
