@@ -3,8 +3,6 @@
 
 #include "stdafx.h"
 #include "Flowers_Shop.h"
-#include "dll_loader.h"
-#include <crtdbg.h>
 
 #define MAX_LOADSTRING 100
 
@@ -26,37 +24,34 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 {
 	UNREFERENCED_PARAMETER(hPrevInstance);
 	UNREFERENCED_PARAMETER(lpCmdLine);
-	
+
  	// TODO: Place code here.
 	MSG msg;
 	HACCEL hAccelTable;
+
+	// Initialize global strings
+	LoadString(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
+	LoadString(hInstance, IDC_FLOWERS_SHOP, szWindowClass, MAX_LOADSTRING);
+	MyRegisterClass(hInstance);
+
+	// Perform application initialization:
+	if (!InitInstance (hInstance, nCmdShow))
 	{
-		dllLoader dl;
-		// Initialize global strings
-		LoadString(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
-		LoadString(hInstance, IDC_FLOWERS_SHOP, szWindowClass, MAX_LOADSTRING);
-		MyRegisterClass(hInstance);
+		return FALSE;
+	}
 
-		// Perform application initialization:
-		if (!InitInstance (hInstance, nCmdShow))
+	hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_FLOWERS_SHOP));
+
+	// Main message loop:
+	while (GetMessage(&msg, NULL, 0, 0))
+	{
+		if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
 		{
-			return FALSE;
-		}
-
-		hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_FLOWERS_SHOP));
-
-		// Main message loop:
-		while (GetMessage(&msg, NULL, 0, 0))
-		{
-			if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
-			{
-				TranslateMessage(&msg);
-				DispatchMessage(&msg);
-			}
+			TranslateMessage(&msg);
+			DispatchMessage(&msg);
 		}
 	}
-	if(_CrtDumpMemoryLeaks())
-		MessageBox(NULL, L"Opps", L"Error", MB_OK | MB_ICONERROR);
+
 	return (int) msg.wParam;
 }
 

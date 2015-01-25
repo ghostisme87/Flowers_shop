@@ -5,7 +5,7 @@ class dllLoader
 {
 private:
 	int m_nFilesCount;
-	WCHAR **m_pFilesNames;
+	TCHAR *m_pFilesNames;
 	HMODULE *m_pHMod;
 public:
 	dllLoader();
